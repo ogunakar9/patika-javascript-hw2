@@ -41,4 +41,11 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+
+  for (let i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].addEventListener("click", function () {
+      this.parentElement.style.display = "none";
+    });
+  }
 }
+
